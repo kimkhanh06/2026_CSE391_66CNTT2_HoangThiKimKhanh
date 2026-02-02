@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>b4</title>
+    <style>
+        label {
+            margin: 10px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Basic Info</legend>
+            <label>Employee ID
+                <input type="number" value="9" readonly>
+            </label>
+            <label>Last name
+                <input type="text" value="Dodsworth">
+            </label>
+            <label>First name
+                <input type="text" value="Anne">
+            </label>
+            <label>Gender</label>
+            <label><input type="radio" name="gender">Male</label>
+            <label><input type="radio" name="gender">Female</label>
+            <label><input type="radio" name="gender">XXX</label>
+            <label><input type="radio" name="gender" checked>ZZZ</label>
+            <label for="title">Title
+                <input id="title" type="text" value="Sales Representative">
+            </label>
+            <label for="suffix">Suffix
+                <input id="suffix" type="text" value="Ms.">
+            </label>
+            <label for="bday">BirthDate
+                <input id="bday" type="datetime-local" value="1969-07-02 00:00">
+            </label>
+            <label for="hday">HireDate
+                <input id="hday" type="datetime-local" value="1994-11-15 00:00:00">
+            </label>
+            <label for="ssn">SSN#
+                <input id="ssn" type="text">
+            </label>
+            <label>Reports To
+                <input type="number">
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Contact Info</legend>
+            <label>Email
+                <input type="email" placeholder="name@example.com">
+            </label>
+            <label for="address">Address
+                <input type="text" value="7 Houndstooth Rd.">
+            </label>
+            <label>City
+                <input type="text" value="London">
+            </label>
+            <label>Region
+                <input type="text">
+            </label>
+            <label>Postal Code
+                <input type="text">
+            </label>
+            <label>Country
+                <select>
+                    <option value="ru">Russian</option>
+                    <option value="vn">Vietnamese</option>
+                    <option value="ch">chinese</option>
+                </select>
+            </label>
+            <label>US Home Phone
+                <input type="tel" pattern="[0-9]{10}">
+            </label>
+            <label>Photo
+                <input type="file">
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Optional Info</legend>
+            <label>Notes
+                <textarea>Anne has a BA degree in English...</textarea>
+            </label>
+            <label>Preferred Shift</label>
+            <label>
+                <input type="checkbox" name="pre">
+                Regular
+            </label>
+            <label>
+                <input type="checkbox" name="pre" checked>
+                Gravy Yard
+            </label>
+
+            <label>Active?
+                <input type="checkbox" checked>
+            </label>
+        </fieldset>
+        <button>Submit</button>
+        <button type="button">Cancel</button>
+
+
+    </form>
+</body>
+
+</html>
