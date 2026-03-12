@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .changeColor {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 id="text">Xin chào</h2>
+
+    <button id="btn">Click </button>
+
+    <script>
+
+        const btn = document.getElementById("btn");
+        const text = document.getElementById("text");
+
+
+        btn.addEventListener("click", function () {
+            console.log("vừa click nút");
+        });
+
+        btn.addEventListener("mouseenter", function () {
+            console.log("mouseenter");
+        });
+
+
+        btn.addEventListener("mouseleave", function () {
+            console.log("mouseleave");
+        });
+
+
+        btn.addEventListener("click", function () {
+            text.textContent = "đã click nút!";
+        });
+
+        btn.addEventListener("click", function () {
+            document.body.classList.toggle("changeColor");
+        });
+
+    </script>
+
+</body>
+
+</html>

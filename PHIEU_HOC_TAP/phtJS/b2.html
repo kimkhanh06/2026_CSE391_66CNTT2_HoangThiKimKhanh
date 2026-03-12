@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifying Elements</title>
+</head>
+
+<body>
+    <h1 id="title">Danh sách việc cần làm</h1>
+
+    <div id="content"></div>
+
+    <ul id="list">
+        <li>Học HTML</li>
+        <li>Học CSS</li>
+    </ul>
+
+    <script>
+        const title = document.getElementById("title");
+        title.textContent = "thay đổi tiêu đề";
+
+        const content = document.getElementById("content");
+        content.innerHTML = " <p> nội dung được thêm </p>";
+
+        const newLi = document.createElement("li");
+        newLi.textContent = 'Học JS';
+
+        const list = document.getElementById("list");
+        list.appendChild(newLi);
+
+        const dele = list.querySelector("li");
+        dele.remove();
+
+    </script>
+
+</body>
+
+</html>

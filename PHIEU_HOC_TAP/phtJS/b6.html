@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Promise </h2>
+    <script>
+        // Tạo Promise mô phỏng lấy dữ liệu (delay 2s)
+        function getData() {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    const success = true;
+                    if (success) {
+                        resolve("Dữ liệu đã được lấy");
+                    } else {
+                        reject("Lỗi khi lấy dữ liệu");
+                    }
+                }, 2000);
+            });
+        }
+        // Sử dụng then() và catch()
+        getData()
+            .then(function (data) {
+                console.log("1", data);
+                return data + " -> 2";
+            })
+            .then(function (data2) {
+                console.log("2:", data2);
+                return data2 + " ->  3";
+            })
+            .then(function (data3) {
+                console.log(" 3:", data3);
+                throw new Error("Lỗi xảy ra ở 3");
+            })
+            .catch(function (error) {
+                console.log("Catch lỗi:", error.message);
+            });
+
+        // Chuyển callback sang Promise
+        // Callback 
+        function loadDataCallback(callback) {
+            setTimeout(() => {
+                callback("Dữ liệu từ callback");
+            }, 1000);
+        }
+
+        // Promise
+        function loadDataPromise() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve("Dữ liệu từ Promise");
+                }, 1000);
+            });
+        }
+
+        loadDataPromise().then(function (data) {
+            console.log(data);
+        });
+
+    </script>
+
+</body>
+
+</html>

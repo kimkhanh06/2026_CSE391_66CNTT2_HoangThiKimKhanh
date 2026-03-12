@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Event</h2>
+
+    <button id="btn">Click me</button>
+
+    <br><br>
+
+    <input id="input" placeholder="Nhấn phím bất kỳ">
+
+    <br><br>
+
+    <!-- 3. Form submit -->
+    <form id="form">
+        <input type="text" placeholder="Nhập tên">
+        <button type="submit">Submit</button>
+    </form>
+
+    <br>
+
+    <!-- 4. Event Bubbling -->
+    <div id="ba" class="box">
+        1
+        <div id="con" class="box">
+            2
+            <button id="bubbleBtn">Bubble Button</button>
+        </div>
+    </div>
+
+    <br>
+
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <script>
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", function () {
+            console.log("Button đã được click");
+        });
+
+        const input = document.getElementById("input");
+
+        input.addEventListener("keydown", function (e) {
+            console.log("Phím được nhấn:", e.key);
+        });
+
+        const form = document.getElementById("form");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            console.log("Form đã được submit");
+        });
+
+
+        const ba = document.getElementById("ba");
+        const con = document.getElementById("con");
+        const bubbleBtn = document.getElementById("bubbleBtn");
+
+        ba.addEventListener("click", function () {
+            console.log("bố");
+        });
+        con.addEventListener("click", function () {
+            console.log("con");
+        });
+
+        bubbleBtn.addEventListener("click", function () {
+            console.log("Button clicked");
+        });
+
+        const list = document.getElementById("list");
+
+        list.addEventListener("click", function (event) {
+
+            if (event.target.tagName === "LI") {
+                console.log("Bạn click vào:", event.target.textContent);
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

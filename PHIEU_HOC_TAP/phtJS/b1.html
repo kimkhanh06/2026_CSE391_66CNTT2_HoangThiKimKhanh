@@ -1,0 +1,28 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting Elements</title>
+</head>
+
+<body>
+    <h1 id="title">title</h1>
+    <p class="para">Lorem ipsum dolor sit</p>
+    <p class="para">amet consectetur adipisicing elit</p>
+    <p class="para">ipsa hic tenetur illum amet aut nulla.</p>
+    <script>
+        const firstPara = document.querySelector(".para");
+        console.log("querySelector: ", firstPara);
+
+        const allPara = document.querySelectorAll(".para");
+        console.log("querySelectorAll: ", allPara);
+
+        const title = document.getElementById("title");
+        console.log("getElementById: ", title);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Attributes & Classes</title>
+    <style>
+        img {
+            width: 200px;
+        }
+    </style>
+
+    <style>
+        .highlight {
+            background-color: yellow;
+            padding: 10px;
+        }
+
+        .dark {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 id="title">Demo ClassList</h2>
+
+    <img id="photo" src="p1.jpg" alt="image">
+
+    <br><br>
+
+    <button id="changeImg">Đổi ảnh</button>
+    <button id="addClass">Thêm class</button>
+    <button id="removeClass">Xóa class</button>
+    <button id="toggleClass">Toggle class</button>
+    <button id="checkClass">Kiểm tra class</button>
+
+    <script>
+
+        const img = document.getElementById("photo");
+        const title = document.getElementById("title");
+
+
+        document.getElementById("changeImg").onclick = function () {
+            img.src = "p2.png";
+        };
+
+
+        document.getElementById("addClass").onclick = function () {
+            title.classList.add("highlight");
+        };
+
+        document.getElementById("removeClass").onclick = function () {
+            title.classList.remove("highlight");
+        };
+
+
+        document.getElementById("toggleClass").onclick = function () {
+            title.classList.toggle("dark");
+        };
+
+
+        document.getElementById("checkClass").onclick = function () {
+
+            if (title.classList.contains("highlight")) {
+                console.log("Title đang có class highlight");
+            } else {
+                console.log("Title không có class highlight");
+            }
+
+        };
+
+    </script>
+
+</body>
+
+</html>
